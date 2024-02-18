@@ -12,7 +12,7 @@ export function TodoList({initialTodos, filter, handleDelete, handleCompletedCha
                     return (
                         <TodoItem  key={id} id={id} text={text} completed={completed} handleCompletedChange={handleCompletedChange} handleDelete={handleDelete}/>
                     )
-                }
+                } else return null
             })}
         </List>
     )
