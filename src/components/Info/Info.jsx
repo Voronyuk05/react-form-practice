@@ -1,4 +1,3 @@
-import { InfoContainer } from "./Info.styled"
 
 export function Info({initialTodos}) {
     const checkedTodos = initialTodos.filter(todo => todo.completed === true).length

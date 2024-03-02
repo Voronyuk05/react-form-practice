@@ -2,7 +2,6 @@ import { Component } from "react"
 import { FaPlus } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { nanoid } from "nanoid";
-import initialTodos from '../todo.json'
 import { Container } from "./App.styled";
 import { TodoList } from "components/TodoList/TodoList"
 import { TodoEditor } from "components/TodoEditor/TodoEditor";
@@ -10,6 +9,7 @@ import { Filter } from "components/Filter/Filter";
 import { Info } from "components/Info/Info";
 import { Modal } from "components/Modal/Modal";
 import { Btn } from "components/Btn/Btn";
+import initialTodos from '../todo.json'
 
 export class App extends Component{
 
@@ -33,10 +33,6 @@ export class App extends Component{
     if (prevProps.todos !== this.state.todos) {
       localStorage.setItem('todos', JSON.stringify(this.state.todos))
     }
-  }
-
-  componentWillUnmount() {
-    console.log('Компонент розмонтувався');
   }
 
   handleDelete = (todoId) => {
@@ -80,7 +76,6 @@ export class App extends Component{
   }
 
   toggleModal = () => {
-    console.log(this.state.showModal);
     this.setState(prev => ({showModal: !prev.showModal}))
   }
 
