@@ -19,12 +19,3 @@ export const TextArea = styled.textarea`
     height: 100px;
     border-radius: 5px;
 `
-
-export const Button = styled.button`
-    width: 200px;
-    height: 50px;
-    color: white;
-    background-color: #009c22;
-    border: none;
-    border-radius: 10px;
-`

@@ -4,8 +4,8 @@ export const Button = styled.button`
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: none;
     background-color: ${p=>p.theme.colors.button};

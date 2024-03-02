@@ -15,12 +15,3 @@ export const Item = styled.li`
         text-decoration: ${({checked}) =>  checked ? 'line-through' : 'none'}
     }
 `
-
-export const Button = styled.button`
-    width: 200px;
-    height: 50px;
-    color: white;
-    background-color: #009c22;
-    border: none;
-    border-radius: 10px;
-`

@@ -59,6 +59,10 @@ export class App extends Component{
     })
   }
 
+  visibleTodos = () => {
+    return this.state.todos.filter(todo => todo.text.toLowerCase().includes(this.state.filter.toLowerCase()))
+  }
+
   handleAddTodo = (text) => {
     const newToDo = {
       text,
@@ -80,6 +84,7 @@ export class App extends Component{
     this.setState(prev => ({showModal: !prev.showModal}))
   }
 
+
   render(){
     return(
       <Container>
@@ -92,7 +97,7 @@ export class App extends Component{
       }
         <Info  initialTodos={this.state.todos}/>
         <Filter filter={this.state.filter} handleFilterChange={this.handleFilterChange} />
-        {this.state.todos && <TodoList  initialTodos={this.state.todos} filter={this.state.filter} handleCompletedChange={this.handleCompletedChange} handleDelete={this.handleDelete} handleAddTodo={this.handleAddTodo}/>}
+        {this.state.todos && <TodoList  initialTodos={this.visibleTodos()} handleCompletedChange={this.handleCompletedChange} handleDelete={this.handleDelete} handleAddTodo={this.handleAddTodo}/>}
       </Container>
     )
   }
