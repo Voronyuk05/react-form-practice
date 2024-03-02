@@ -5,9 +5,9 @@ export function Info({initialTodos}) {
     const todosLength = initialTodos.length
 
     return (
-        <InfoContainer>
+        <div>
             <p>Всього завдань: {todosLength}</p>
             <p>Виконано: {checkedTodos}</p>
-        </InfoContainer>
+        </div>
     )
 }
